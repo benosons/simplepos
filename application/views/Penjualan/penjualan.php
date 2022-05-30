@@ -213,12 +213,12 @@
                                 <div class="items">
                                     <?php foreach ($result as $row) {  ?>
                                         <div class="col-md-3 pro-1">
-                                            <div class="col-m" style="padding:0.5em;">
+                                            <div class="col-m-cancel" style="padding:0.5em;">
                                                 <a href="#" onclick="detailCart('<?php echo $row->id_barang ?>')" class="offer-img">
-                                                    <div class="img1">
+                                                    <!-- <div class="img1">
                                                         <img src="<?php echo  base_url('uploads/') . $row->foto; ?>" style="width: 100px; height: 100px;" class="img-responsive" alt="<?php echo $row->nama_barang; ?>">
-                                                    </div>
-                                                    <?php if ($row->ukuran == 1) : ?>
+                                                    </div> -->
+                                                    <!-- <?php if ($row->ukuran == 1) : ?>
                                                         <div class="offerg">
                                                             <p>
                                                                 <span><?php echo $row->nama_ukuran; ?></span>
@@ -254,7 +254,7 @@
                                                                 <span><?php echo $row->nama_ukuran; ?></span>
                                                             </p>
                                                         </div>
-                                                    <?php endif; ?>
+                                                    <?php endif; ?> -->
                                                 </a>
                                                 <div class="mid-1">
                                                     <div class="women">
@@ -266,7 +266,7 @@
                                                         <p align="center"><label>Rp.<?= $this->fungsi->rupiah($row->harga); ?></label></p>
                                                     </div>
                                                     <div class="add">
-                                                        <a href="<?php echo base_url() . 'index.php/penjualan/tambah_barang/' . $row->id_barang . '/1' ?>" type="button" class="btn btn-danger my-cart-btn my-cart-b">Add to Cart</a>
+                                                        <a href="<?php echo base_url() . 'index.php/penjualan/tambah_barang/' . $row->id_barang . '/1' ?>" type="button" class="btn btn-danger my-cart-btn my-cart-b" style="width:100%;">Add to Cart</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -575,6 +575,7 @@
 <script src="<?php echo base_url() ?>assets/plugins/zoomto/jquery.zoomtoo.js"></script>
 <script>
     $(function() {
+        $('#master-penjualan').addClass('active')
         $("#picture-frame").zoomToo({
             magnify: 1
         });

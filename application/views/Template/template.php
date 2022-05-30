@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Simple Point of Sale</title>
+	<title>Point of Sale</title>
 	<!-- Tell the browser to be responsive to screen width -->
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 	<!-- Bootstrap 3.3.7 -->
@@ -47,9 +47,9 @@
 			<!-- Logo -->
 			<a href="index2.html" class="logo">
 				<!-- mini logo for sidebar mini 50x50 pixels -->
-				<span class="logo-mini"><b>C</b>P</span>
+				<span class="logo-mini"><b>POS</b></span>
 				<!-- logo for regular state and mobile devices -->
-				<span class="logo-lg"><b>Simple</b>POS</span>
+				<span class="logo-lg"><b>Point</b> of Sale</span>
 			</a>
 			<!-- Header Navbar: style can be found in header.less -->
 			<nav class="navbar navbar-static-top">
@@ -114,7 +114,7 @@
 							</span>
 						</a>
 					</li>
-					<li class="active treeview">
+					<li class="treeview" id="master-data">
 						<a href="#">
 							<i class="fa fa-folder-o"></i> <span>MASTER DATA</span>
 							<span class="pull-right-container">
@@ -122,32 +122,32 @@
 							</span>
 						</a>
 						<ul class="treeview-menu">
-							<li class="active"><a href="<?php echo base_url() ?>index.php/kategori"><i class="fa fa-circle-o"></i>KATEGORI</a></li>
-							<li><a href="<?php echo base_url() ?>index.php/barang"><i class="fa fa-circle-o"></i>BARANG</a></li>
+							<li class="" hidden><a href="<?php echo base_url() ?>index.php/kategori"><i class="fa fa-circle-o"></i>KATEGORI</a></li>
+							<li id="menu-barang"><a href="<?php echo base_url() ?>index.php/barang"><i class="fa fa-circle-o"></i>BARANG</a></li>
 						</ul>
 					</li>
-					<li>
+					<li hidden>
 						<a href="<?php echo base_url() ?>index.php/operator">
 							<i class="fa fa-user-circle"></i> <span>OPERATOR</span>
 							<span class="pull-right-container">
 							</span>
 						</a>
 					</li>
-					<li>
+					<li id="master-stok">
 						<a href="<?php echo base_url() ?>index.php/stok">
 							<i class="fa fa-cubes"></i> <span>STOK</span>
 							<span class="pull-right-container">
 							</span>
 						</a>
 					</li>
-					<li>
+					<li id="master-penjualan">
 						<a href="<?php echo base_url() ?>index.php/penjualan">
 							<i class="fa fa-shopping-cart"></i> <span>PENJUALAN</span>
 							<span class="pull-right-container">
 							</span>
 						</a>
 					</li>
-					<li class="active treeview">
+					<li class="treeview" hidden>
 						<a href="#">
 							<i class="fa fa-folder-o"></i> <span>LAPORAN</span>
 							<span class="pull-right-container">
@@ -211,7 +211,7 @@
 			<!-- Content Header (Page header) -->
 			<section class="content-header">
 				<h1>
-					BilBilWest
+					Point of Sale
 					<small>Control panel</small>
 				</h1>
 			</section>

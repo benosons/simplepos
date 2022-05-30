@@ -28,29 +28,29 @@ class Barang extends CI_Controller
             $config['remove_spaces'] = TRUE;
             $config['encrypt_name'] = TRUE;
             $this->upload->initialize($config);
-            if (!$this->upload->do_upload('foto')) {
-                $this->session->set_flashdata('message', $this->upload->display_errors());
-                redirect($_SERVER['HTTP_REFERER']);
-                return false;
-            } else {
+            // if (!$this->upload->do_upload('foto')) {
+            //     $this->session->set_flashdata('message', $this->upload->display_errors());
+            //     redirect($_SERVER['HTTP_REFERER']);
+            //     return false;
+            // } else {
                 // proses barang
                 $id = $this->input->post('id');
                 $nama = $this->input->post('nama_barang');
                 $kategori = $this->input->post('kategori');
                 $harga = $this->input->post('harga');
-                $ukuran = $this->input->post('ukuran');
-                $foto = $this->upload->data('file_name');
+                // $ukuran = $this->input->post('ukuran');
+                // $foto = $this->upload->data('file_name');
                 $data = array(
                     'nama_barang' => $nama,
                     'id_kategori' => $kategori,
-                    'ukuran' => $ukuran,
+                    // 'ukuran' => $ukuran,
                     'harga' => $harga,
-                    'foto' => $foto,
+                    // 'foto' => $foto,
                 );
                 $this->Model_barang->post($data, $id);
                 $this->session->set_flashdata('message', 'Data Barang berhasil ditambahkan!');
                 redirect('barang');
-            }
+            // }
         } else {
             $id = $this->uri->segment(3);
             $data['error'] = $this->upload->display_errors();
@@ -75,11 +75,11 @@ class Barang extends CI_Controller
             $config['remove_spaces'] = TRUE;
             $config['encrypt_name'] = TRUE;
             $this->upload->initialize($config);
-            if (!$this->upload->do_upload('foto')) {
-                $this->session->set_flashdata('message', $this->upload->display_errors());
-                redirect($_SERVER['HTTP_REFERER']);
-                return false;
-            } else {
+            // if (!$this->upload->do_upload('foto')) {
+            //     $this->session->set_flashdata('message', $this->upload->display_errors());
+            //     redirect($_SERVER['HTTP_REFERER']);
+            //     return false;
+            // } else {
                 $id         =   $this->input->post('id');
                 $foto = $this->Model_barang->get_one($id)->row_array()['foto'];
                 $path = $this->upload->data('file_path');
@@ -92,19 +92,19 @@ class Barang extends CI_Controller
                 $nama       =   $this->input->post('nama_barang');
                 $kategori   =   $this->input->post('kategori');
                 $harga      =   $this->input->post('harga');
-                $ukuran     =   $this->input->post('ukuran');
-                $foto = $this->upload->data('file_name');
+                // $ukuran     =   $this->input->post('ukuran');
+                // $foto = $this->upload->data('file_name');
                 $data       = array(
                     'nama_barang' => $nama,
                     'id_kategori' => $kategori,
-                    'ukuran' => $ukuran,
+                    // 'ukuran' => $ukuran,
                     'harga' => $harga,
-                    'foto' => $foto,
+                    // 'foto' => $foto,
                 );
                 $this->Model_barang->edit($data, $id);
                 $this->session->set_flashdata('message', 'Data Barang berhasil dirubah!');
                 redirect('barang');
-            }
+            // }
         } else {
             $id =  $this->uri->segment(3);
             $this->load->model('Model_kategori');

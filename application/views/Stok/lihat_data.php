@@ -87,8 +87,11 @@
 <script src="<?php echo base_url() ?>assets/app/js/alert.js"></script>
 <script>
 	$(document).ready(function() {
+
+		$('#master-stok').addClass('active');
+
 		$('#myTable').DataTable({
-			dom: 'Blfrtip',
+			// dom: 'Blfrtip',
 			"columnDefs": [{
 				targets: 5,
 				render: $.fn.dataTable.render.percentBar('round', '#fff', '#FF9CAB', '#FF0033', '#FF9CAB', 0, 'solid')

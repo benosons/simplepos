@@ -53,3 +53,8 @@
 		</div>
 </div>
 </section>
+<script>
+	$(document).ready(function() {
+		$('#master-stok').addClass('active');
+	})
+</script>

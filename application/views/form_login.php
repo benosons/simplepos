@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Simple Point of Sale | Log in</title>
+  <title>Point of Sale | Log in</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -20,10 +20,18 @@
 
   <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/animation/style.css">
 </head>
-
+<style>
+    .icon-login {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 30%;
+    }
+  </style>
 <body onload="openEyes()">
   <div class="container" id="loginContainer">
-    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-120 100 1920 600" style="enable-background:new 0 0 1920 600;" xml:space="preserve">
+    <div><img class="icon-login" src="../uploads/point-of-sale-icon.png"></i></div>
+    <svg hidden version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-120 100 1920 600" style="enable-background:new 0 0 1920 600;" xml:space="preserve">
       <style type="text/css">
         .st0 {
           fill: none;
@@ -141,8 +149,8 @@
       <g>
         <ellipse id="headInner" class="st1" cx="832" cy="432" rx="146" ry="155" />
         <path id="headOutline" class="st2" d="M832,279c38.4,0,74.6,15.9,101.7,44.7C961,352.6,976,391.1,976,432s-15,79.4-42.3,108.3
-		C906.6,569.1,870.4,585,832,585s-74.6-15.9-101.7-44.7C703,511.4,688,472.9,688,432s15-79.4,42.3-108.3
-		C757.4,294.9,793.6,279,832,279 M832,275c-81.7,0-148,70.3-148,157s66.3,157,148,157s148-70.3,148-157S913.7,275,832,275L832,275z" />
+		  C906.6,569.1,870.4,585,832,585s-74.6-15.9-101.7-44.7C703,511.4,688,472.9,688,432s15-79.4,42.3-108.3
+		  C757.4,294.9,793.6,279,832,279 M832,275c-81.7,0-148,70.3-148,157s66.3,157,148,157s148-70.3,148-157S913.7,275,832,275L832,275z" />
       </g>
       <ellipse id="snout" class="st4" cx="831.5" cy="489.5" rx="99.5" ry="83.5" />
       <ellipse id="eyeLeft" transform="matrix(0.9962 -8.715574e-02 8.715574e-02 0.9962 -27.4684 69.9878)" class="st5" cx="787.8" cy="349.6" rx="29.2" ry="36.1" />
@@ -204,7 +212,7 @@ right middle:
     </div>
     <div style="margin: 40px 40px;">
       <div style="text-align: center">
-        <button type="submit" name="submit">Login</button>
+        <button class="btn btn-success" type="submit" name="submit">Login</button>
       </div>
       </form>
     </div>

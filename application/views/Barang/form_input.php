@@ -43,7 +43,7 @@
 						</div>
 						<div class="help-block with-errors"></div>
 					</div>
-					<div class="form-group">
+					<div class="form-group" hidden>
 						<label for="ukuran" class="control-label">Ukuran</label>
 						<div class="input-group">
 							<select class="form-control" name="ukuran">
@@ -69,7 +69,7 @@
 						</div>
 						<div class="help-block with-errors"></div>
 					</div>
-					<div class="form-group">
+					<div class="form-group" hidden>
 						<label for="foto" class="control-label">Foto</label>
 						<div class="input-group">
 							<input type="file" name="foto" class="form-control">
@@ -90,3 +90,9 @@
 		</div>
 	</div>
 </section>
+<script>
+	$(document).ready(function() {
+		$('#master-data').addClass('active');
+		$('#menu-barang').addClass('active');
+	})
+</script>

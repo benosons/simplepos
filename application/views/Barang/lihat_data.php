@@ -47,9 +47,9 @@
 								<th>No</th>
 								<th>Nama Barang</th>
 								<th>Kategori Barang</th>
-								<th>Ukuran</th>
+								<!-- <th>Ukuran</th> -->
 								<th>Harga</th>
-								<th>Foto</th>
+								<!-- <th>Foto</th> -->
 								<th>Aksi</th>
 							</tr>
 						</thead>
@@ -60,13 +60,13 @@
 								<td><?php echo ++$no; ?></td>
 								<td><?php echo $r->nama_barang; ?></td>
 								<td><?php echo $r->nama_kategori; ?></td>
-								<td><?php echo $r->nama_ukuran; ?></td>
+								<!-- <td><?php echo $r->nama_ukuran; ?></td> -->
 								<td>Rp.<?php echo number_format($r->harga); ?></td>
-								<td>
+								<!-- <td>
 									<a href="<?php echo (site_url('uploads/' . $r->foto)); ?>" class="image-link">
 										<img src="<?php echo (site_url('uploads/' . $r->foto)); ?>" alt="" style="width:30px;height:30px">
 									</a>
-								</td>
+								</td> -->
 								<td><?php
 										echo anchor(site_url('barang/edit/' . $r->id_barang), '<i class="fa fa-pencil-square-o fa-lg"></i>&nbsp;&nbsp;Edit', array('title' => 'edit', 'class' => 'btn btn-sm btn-warning'));
 										echo '&nbsp';
@@ -85,54 +85,56 @@
 <script src="<?php echo base_url() ?>assets/app/js/alert.js"></script>
 <script>
 	$(document).ready(function() {
+		$('#master-data').addClass('active');
+		$('#menu-barang').addClass('active');
 		$('#myTable').DataTable({
 
-			dom: 'Blfrtip',
-			buttons: [{
-					extend: 'csvHtml5',
-					exportOptions: {
-						columns: [0, 1, 2, 3, 4, ],
-					},
-				},
-				{
-					extend: 'excelHtml5',
-					title: 'DATA BARANG',
-					exportOptions: {
-						columns: [0, 1, 2, 3, 4],
-					},
-				},
-				{
-					extend: 'copyHtml5',
-					title: 'Data Barang',
-					exportOptions: {
-						columns: [0, 1, 2, 3, 4],
-					},
-				},
-				{
-					extend: 'pdfHtml5',
-					oriented: 'portrait',
-					pageSize: 'legal',
-					title: 'Data Barang',
-					download: 'open',
-					exportOptions: {
-						columns: [0, 1, 2, 3, 4],
-					},
-					customize: function(doc) {
-						doc.content[1].table.widths = Array(doc.content[1].table.body[0].length + 1).join('*').split('');
-						doc.styles.tableBodyEven.alignment = 'center';
-						doc.styles.tableBodyOdd.alignment = 'center';
-					},
-				},
-				{
-					extend: 'print',
-					oriented: 'portrait',
-					pageSize: 'A4',
-					title: 'Data Barang',
-					exportOptions: {
-						columns: [0, 1, 2, 3, 4],
-					},
-				},
-			],
+			// dom: 'Blfrtip',
+			// buttons: [{
+			// 		extend: 'csvHtml5',
+			// 		exportOptions: {
+			// 			columns: [0, 1, 2, 3, 4, ],
+			// 		},
+			// 	},
+			// 	{
+			// 		extend: 'excelHtml5',
+			// 		title: 'DATA BARANG',
+			// 		exportOptions: {
+			// 			columns: [0, 1, 2, 3, 4],
+			// 		},
+			// 	},
+			// 	{
+			// 		extend: 'copyHtml5',
+			// 		title: 'Data Barang',
+			// 		exportOptions: {
+			// 			columns: [0, 1, 2, 3, 4],
+			// 		},
+			// 	},
+			// 	{
+			// 		extend: 'pdfHtml5',
+			// 		oriented: 'portrait',
+			// 		pageSize: 'legal',
+			// 		title: 'Data Barang',
+			// 		download: 'open',
+			// 		exportOptions: {
+			// 			columns: [0, 1, 2, 3, 4],
+			// 		},
+			// 		customize: function(doc) {
+			// 			doc.content[1].table.widths = Array(doc.content[1].table.body[0].length + 1).join('*').split('');
+			// 			doc.styles.tableBodyEven.alignment = 'center';
+			// 			doc.styles.tableBodyOdd.alignment = 'center';
+			// 		},
+			// 	},
+			// 	{
+			// 		extend: 'print',
+			// 		oriented: 'portrait',
+			// 		pageSize: 'A4',
+			// 		title: 'Data Barang',
+			// 		exportOptions: {
+			// 			columns: [0, 1, 2, 3, 4],
+			// 		},
+			// 	},
+			// ],
 			"fnDrawCallback": function() {
 				$('.image-link').magnificPopup({
 					type: 'image',

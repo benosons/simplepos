@@ -48,7 +48,7 @@
 						</div>
 						<div class="help-block with-errors"></div>
 					</div>
-					<div class="form-group">
+					<!-- <div class="form-group">
 						<label for="ukuran" class="control-label">Ukuran</label>
 						<div class="input-group">
 							<select class="form-control" name="ukuran">
@@ -66,7 +66,7 @@
 								<span class="fa fa-expand"></span>
 							</span>
 						</div>
-					</div>
+					</div> -->
 					<div class="form-group">
 						<label for="harga" class="control-label">Harga</label>
 						<div class="input-group">
@@ -78,7 +78,7 @@
 						</div>
 						<div class="help-block with-errors"></div>
 					</div>
-					<div class="form-group">
+					<!-- <div class="form-group">
 						<label for="foto" class="control-label">Foto</label>
 						<div class="input-group">
 							<input type="file" name="foto" class="form-control">
@@ -88,7 +88,7 @@
 							</span>
 						</div>
 						<div class="help-block with-errors"></div>
-					</div>
+					</div> -->
 					<div class="box-footer">
 						<input type="hidden" name="id" value="<?php echo $record['id_barang'] ?>">
 						<button type="submit" name="submit" class="btn btn-primary ">Simpan</button>
@@ -100,3 +100,9 @@
 		</div>
 	</div>
 </section>
+<script>
+	$(document).ready(function() {
+		$('#master-data').addClass('active');
+		$('#menu-barang').addClass('active');
+	})
+</script>
