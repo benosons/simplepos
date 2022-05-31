@@ -17,7 +17,7 @@ class Dashboard extends CI_controller
         $data['graph'] = $this->Model_dashboard->graph_stok();
         $data['kategori'] = $this->Model_dashboard->graph_kategori();
         $data['laris'] = $this->Model_dashboard->barang_laris();
-        $this->template->load('Template/template', 'Dashboard/lihat_dashboard', $data);
+        $this->template->load('template/template', 'dashboard/lihat_dashboard', $data);
         // var_dump($this->session->userdata());
         // die;
     }
