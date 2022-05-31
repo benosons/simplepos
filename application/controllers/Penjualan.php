@@ -58,7 +58,7 @@ class Penjualan extends CI_Controller
                 'ukuran' => $this->Model_barang->tampilkan_ukuran()->result(),
             );
             //-----sebuah kumpulan variable yang di satukan menjadi array pada variable $data
-            $this->template->load('template/template', 'Penjualan/penjualan', $data);  //memanggil template dan view dari controller beserta variable $data
+            $this->template->load('template/template', 'penjualan/penjualan', $data);  //memanggil template dan view dari controller beserta variable $data
         } else {
             
             $total = $this->Model_penjualan->stok_list();
@@ -92,7 +92,7 @@ class Penjualan extends CI_Controller
                 'kategori' => $this->Model_kategori->tampilkan_data(),
                 'ukuran' => $this->Model_barang->tampilkan_ukuran()->result(),
             );
-            $this->template->load('template/template', 'Penjualan/penjualan', $data);
+            $this->template->load('template/template', 'penjualan/penjualan', $data);
         }
     }
 
@@ -230,7 +230,7 @@ class Penjualan extends CI_Controller
         if (!$detail_penjualan && !$pjl && !$png) {
             $this->cart->destroy();
             $this->session->set_flashdata('message', 'Penjualan Sukses');
-            redirect('Penjualan/struk/' . $id_dtlpenjualan['id']);
+            redirect('penjualan/struk/' . $id_dtlpenjualan['id']);
         } else {
             $this->session->set_flashdata('message', 'Ooopss! Penjualan Gagal, Namun Stok Data Berubah!');
             redirect('penjualan');
