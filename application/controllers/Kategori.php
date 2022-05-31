@@ -13,7 +13,7 @@ class Kategori extends CI_Controller
 	function index()
 	{
 		$data['record'] = $this->Model_kategori->tampilkan_data();
-		$this->template->load('template/template', 'Kategori/lihat_data', $data);
+		$this->template->load('template/template', 'kategori/lihat_data', $data);
 		$this->load->view('template/datatables');
 
 	}
