@@ -8,7 +8,7 @@ class Fungsi
 	function __construct()
 	{
 		$this->_ci = &get_instance();
-		$this->_ci->load->model('Model_Barang');
+		$this->_ci->load->model('Model_barang');
 	}
 
 	function template($content, $data = null)
