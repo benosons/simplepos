@@ -105,7 +105,7 @@
                             <td><?php echo $row->jam_trf; ?></td>
                             <td><?php echo $row->metode; ?></td>
                             <td><?php
-                                    echo anchor(site_url('penjualan/struk/' . $row->id), '<i class="fa fa-eye"></i>&nbsp;&nbsp;Detail', array('title' => 'edit', 'class' => 'btn btn-sm btn-info'));
+                                    echo anchor(site_url('Penjualan/struk/' . $row->id), '<i class="fa fa-eye"></i>&nbsp;&nbsp;Detail', array('title' => 'edit', 'class' => 'btn btn-sm btn-info'));
                                     echo '&nbsp';
                                     echo anchor(site_url('laporan/hapus/' . $row->id), '<i class="fa fa-trash fa-lg"></i>&nbsp;&nbsp;Hapus', 'title="delete" class="btn btn-sm btn-danger "');
                                     ?>

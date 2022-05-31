@@ -230,7 +230,7 @@ class Penjualan extends CI_Controller
         if (!$detail_penjualan && !$pjl && !$png) {
             $this->cart->destroy();
             $this->session->set_flashdata('message', 'Penjualan Sukses');
-            redirect('penjualan/struk/' . $id_dtlpenjualan['id']);
+            redirect('Penjualan/struk/' . $id_dtlpenjualan['id']);
         } else {
             $this->session->set_flashdata('message', 'Ooopss! Penjualan Gagal, Namun Stok Data Berubah!');
             redirect('penjualan');
